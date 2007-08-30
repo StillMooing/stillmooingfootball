@@ -1,0 +1,41 @@
+#labels Phase-Design
+= Introduction =
+
+Version 1.90 is up for download.  This is a quick status report.
+
+= Details =
+
+There's about a week to go before the regular season starts, and about 3 weeks 'til the begginning of the betting season.  Here's where things stand:
+  
+==*Done:*==
+  * Everything (I believe) is working as it was last year.
+    * I haven't tested updateWeek.php yet, but the code should all theoretically be in place
+  * Time has been swapped to system time in the db through week 7.
+    * fixDateInNFLWeek.php takes string dates in the database, and changes them to time dates.
+    * Weeks 8-21 are waiting for Jon/Alisa to change to current year schedule.
+  * Everything has been setup to automatically work for the different number of games (and additional betting rules) in the playoffs.
+    * I know this doesn't break the regular season, but haven't fully tested the reliability in playoff weeks.
+  * A TBD "team" was added to the team list so playoff weeks could be shown from the beginning.
+  * A table (currentWeek) was added to the db housing nothing but the current week.
+    * A function (thisWeek($year)) was added to alwaysInclude.php to grab the current week.
+    * updateWeek.php was altered to increment this by 1 after each week is updated.
+  * In an effort to avoid static pages and to keep Jon from having to ftp, a db table (blurb_2007) was added to house Jon's blurb each week.
+    * content.php (the default loaded page) now uses thisWeek($year) to display the blurb for the current week.
+    * enterBlurb.php (admin only) gives a text box, and pulls down the requested weeks blurb for editing.  (submitting doesn't work... see TBD below)
+    * dislpayBlurbs.php lets the user (non-admin) see a requested weeks blurb, defaulting to the current week. 
+
+==TBD==
+  * Time-checking for betting needs to be much improved over last year.
+  * writeBlurb.php doesn't work... won't write the blurb... MySQL error... no idea why...
+  * resetToWeek.php (doesn't currently exists) needs to be created.
+    * resets everybodys stats in the user$year table to pre-season, and recalculates everything up to the requested week.
+  * displayStandings.php needs to work correctly for standings before the current week.
+    * This is by far the hardest thing to update... More soon...
+
+
+
+
+
+
+
+

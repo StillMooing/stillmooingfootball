@@ -1,0 +1,31 @@
+#labels Phase-Design
+= Introduction =
+
+displayStandings.php needs to diplay all old weeks.  This won't be easy, but here's a plan of attack.
+
+
+= Plan of Attack =
+  # Check users$year (users_2007) to find the name of each user table
+  # Grab the users table and get all information except betTeam which won't be necessary.
+  # Total bet amount = sum(bet1-4) and arrange in a matrix (array) like so: 
+      || user1 || beginScore || totalBetAmount || gamesWon || won_lost || endScore ||
+      || user2 || beginScore || totalBetAmount || gamesWon || won_lost || endScore ||
+      || user3 || beginScore || totalBetAmount || gamesWon || won_lost || endScore ||
+  # Sort by beginScore and add column for beginRank (Is there an easier way to do this?)
+      || user2 || beginScore || totalBetAmount || gamesWon || won_lost || endScore || 1 ||
+      || user1 || beginScore || totalBetAmount || gamesWon || won_lost || endScore || 2 ||
+      || user3 || beginScore || totalBetAmount || gamesWon || won_lost || endScore || 3 ||
+  # Sort by endScore to get final ranking 
+      || user3 || beginScore || totalBetAmount || gamesWon || won_lost || endScore || 3 ||
+      || user2 || beginScore || totalBetAmount || gamesWon || won_lost || endScore || 1 ||
+      || user1 || beginScore || totalBetAmount || gamesWon || won_lost || endScore || 2 ||
+  # Now we can take this array and write into the Standings format.
+
+= Key Difficulties =
+  # How do we sort "excel-style?"  Sort one column but have it maintain it's dependencies.  I can do this in MySQL if it's all in one table, but we're pulling from many tables.  Do we have to create a temporary table?  Or is there an easy way to do this in php?
+  # Is there a better way than sorting twice to get beginRank and endRank?  Should we just have beginRank in the user table and updated through updateWeek?  If so, we need to decide quick because the user table creation is going to have to be updated before anybody registers... perhaps I should just do this as a preventative measure?
+
+
+
+
+

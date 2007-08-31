@@ -30,7 +30,7 @@ There's about a week to go before the regular season starts, and about 3 weeks '
   * resetToWeek.php (doesn't currently exists) needs to be created.
     * resets everybodys stats in the user$year table to pre-season, and recalculates everything up to the requested week.
   * displayStandings.php needs to work correctly for standings before the current week.
-    * This is by far the hardest thing to update... More soon...
+    * This is by far the hardest thing to update... See DisplayStandingsPlan...
 
 
 

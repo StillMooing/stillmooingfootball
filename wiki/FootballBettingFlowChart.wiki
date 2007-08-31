@@ -1,0 +1,20 @@
+= Introduction =
+
+This is intended to describe the flow of actions to clarify the way code would be looked at and tested.
+
+= Flow =
+  # Pages are spliced together in the order topAndLeft.php, [content].php and menu.php
+    * topAndLeft.php contains the banner and the left borders.
+    * menu.php contains the menu bar on the right.
+    * [content].php is what all end-user diplayed pages are substituted in for.
+  # the main page by default calls content.php.
+  # The user chooses to Log-in and is taken to registration.php
+  # registration.php has a form which calls completeRegistration.php which in turn calls registerUser.php.
+  # The administrator enters the blurb for the week using enterBlurb.php which calls writeBlurb.php.
+  # The user checks the blurb either by going home (content.php) to check the current week, or to displayBlurbs.php to see all blurbs.
+  # The admistrator enters the spreads/lines for the week by going to enterLines.php which calls writeLines.php.
+  # The user bets on the lines by going to enterPicks.php which calls writePicks.php.
+  # The administrator enters the scores for the completed week by going to enterScores.php which calls writeScores.php.
+  # The administrator updates all information for the week and re-ranks the users by going to updateWeek.php.
+  # the user checks the standings by going to displayStandings.php
+

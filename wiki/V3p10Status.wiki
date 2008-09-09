@@ -1,0 +1,24 @@
+#labels Phase-Requirements
+= Introduction =
+
+Version 3p10 release notes
+
+
+= Details =
+
+Done:
+
+  * Everything (I believe) is working as it was last year.
+    * Some minor changes had to be re-added (where'd I lose the changes) and things work brilliantly. 
+  * ResetToWeek was added.  Currently it only reset to scratch, and then you can update week from there.
+  * UserPicksByWeek was carried over from early season last year.
+  * PicksByNFLTeam was added this year
+    * Need further additions for full functionality.
+  * Time seems to be calculated brilliantly now.
+  * writeBlurb works fine from early last year
+  * displayStandings works fine from early last year.  
+
+TBD:
+
+  * All the code needs to be thoroughly cleaned.
+  * Other than that, really just site enhancements... She's getting pretty....

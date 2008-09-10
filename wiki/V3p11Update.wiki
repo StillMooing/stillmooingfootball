@@ -1,0 +1,8 @@
+= Introduction =
+
+V 3.11 adds minor updates from 3.10
+
+
+= Details =
+  * picksbyIndividual still had week >=3... changed to week >=1
+  * covered column now working right in picksByNFLTeam

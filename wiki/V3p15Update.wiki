@@ -1,0 +1,14 @@
+= Introduction =
+
+Version 3.15 adds weekly totals to displayStandings.php
+
+
+= Details =
+
+  *  last update -- 9/13/08
+  *       JJ 9/13/08: Added more Weekly Total Stats
+    *                   added round(x,2) to anything that could be a floating point to restrict significant figures
+  *       JJ 9/12/08: Removed warnings column (still in updateWeek.php)
+    *                   Made Weekly Totals its own table and added a bunch more totals...
+  *       JJ 9/11/08: Added column to display the percentage of your total points that you bet.
+    *                   Added rows at end for: Total Points Won, Total Points Lost

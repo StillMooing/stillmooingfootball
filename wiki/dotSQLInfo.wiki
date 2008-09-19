@@ -1,0 +1,8 @@
+= Introduction =
+
+Beginning with Version 3.30 of footballpicks, and the switch to hostmonster, occasional uploads of db backup will be stored at googlecode with the .sql extension.
+
+
+= Details =
+
+Backups will be made weekly, but somewhat less frequently will be stored here for safekeeping.  Date and time are included in file name.

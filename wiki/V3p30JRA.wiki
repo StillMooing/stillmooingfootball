@@ -1,0 +1,8 @@
+= Introduction =
+
+Version 3.30 is the first version to be compatible with the hostmonster.com server at jrafootball.com.  
+
+
+= Details =
+
+All updates in this version were mandatory for proper working function of footballpicks at jrafootball.com.  Versions beyond 3.30 will continue to improve the site on jrafootball.com.  All updated code was carefully commented with updates in the site transfer.  See notes at beginning of each code page for steps necessary to transfer from last version (hostonce) to this version (hostmonster)
